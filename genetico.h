@@ -172,20 +172,15 @@ struct Genetico{
 				mejor_aptitud=mejor.aptitud;
 				past_modification=i;
 				pair<double,double> X=mejor.representacion.getX();
-				cout << i << "; " << this->problema->func(X.first,X.second) << endl;
 			} else if(mejor.aptitud==mejor_aptitud){
 					if(i-past_modification>10)
 						estable=true;
 			} else {
 				pair<double,double> X=mejor.representacion.getX();
-				cout << i << "; " << this->problema->func(X.first,X.second) << endl;
 				past_modification=i;
 			}
 			i++;
 		}
-		pair<double,double> X=mejor.representacion.getX();
-		cout << i << "; " << this->problema->func(X.first,X.second) << endl;
-		//cout << i << " iteraciones" << endl;
 		return mejor;
 	}
 };

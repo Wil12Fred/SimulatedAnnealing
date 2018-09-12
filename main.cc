@@ -25,8 +25,9 @@ int main(int argc, char **argv){
 	Individuo mejorg=G.iniciar(false);*/
 
 	//Simulated annealing
-	Practica2<Individuo> P2(1,300,16);
-	Simulated_Annealing<Practica2<Individuo> > SA(&P2);
+	Practica2<Individuo> P3(1,300,18);
+	Simulated_Annealing<Practica2<Individuo> > SA(&P3);
 	Individuo mejor=SA.iniciar(false);
+	pair<double,double> X=mejor.representacion.getX();
 	return 0;
 }
