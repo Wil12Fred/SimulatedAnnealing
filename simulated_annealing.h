@@ -4,6 +4,7 @@ struct Simulated_Annealing: Genetico<P>{
 	Simulated_Annealing(P* p):
 		Genetico<P>(p,0,1,true){
 		T=1;
+		this->problema->tamano_de_poblacion=1;
 	}
 	set<Indiv>* m_poblacion(){
 		return this->poblacion;
